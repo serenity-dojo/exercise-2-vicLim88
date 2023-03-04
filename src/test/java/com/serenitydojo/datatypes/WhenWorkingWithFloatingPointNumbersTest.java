@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class WhenWorkingWithFloatingPointNumbers {
+public class WhenWorkingWithFloatingPointNumbersTest {
 
     //
     // Exercise 1: Convert 27 degrees Celcius to Farenheit
