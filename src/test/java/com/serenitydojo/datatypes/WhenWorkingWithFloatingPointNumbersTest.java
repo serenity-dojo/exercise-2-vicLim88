@@ -1,5 +1,7 @@
 package com.serenitydojo.datatypes;
 
+import com.serenitydojo.datatypes.utils.conversion.ConvertKiloToPound;
+import com.serenitydojo.datatypes.utils.conversion.ConvertToFarenheit;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -14,10 +16,7 @@ public class WhenWorkingWithFloatingPointNumbersTest {
     @Test
     public void convertToFarenheit() {
         double celcius = 27.0d;
-        double farenheit = 0.0d;
-
-        // TODO: Use a floating point calculation to calculate the farenheit equivalent of the celcius value.
-
+        double farenheit = new ConvertToFarenheit(celcius).getFahrenheit();
         assertThat(farenheit, equalTo(80.6));
     }
 
@@ -28,11 +27,7 @@ public class WhenWorkingWithFloatingPointNumbersTest {
     @Test
     public void convertMetersToFeet() {
         int weightInKilograms = 50;
-        double weightInPounds = 0;
-
-        // TODO: Use a floating point calculation to calculate the correct weight in pounds
-
+        double weightInPounds = new ConvertKiloToPound(weightInKilograms).getPound();
         assertThat(weightInPounds, equalTo(110.231));
-
     }
 }
